@@ -1,14 +1,16 @@
-// Make sure this runs when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   checkPassword();
 });
 
-// Your existing code
 function checkPassword() {
-  const secret = "zazaeini"; // change to your secret password
+  const secret = "zazaeini"; // change this to your secret password
   let entered = prompt("Enter the secret password 💖:");
 
-  if (entered !== secret) {
+  if (entered === secret) {
+    // Unlock the page
+    document.getElementById("content").classList.remove("blurred");
+    document.getElementById("overlay").style.display = "none";
+  } else {
     alert("Sorry, wrong password 😢");
     document.body.innerHTML = "<h2 style='color:white; text-align:center; margin-top:20%;'>Access Denied 🚫</h2>";
   }
