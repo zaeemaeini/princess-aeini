@@ -1,3 +1,9 @@
+// Make sure this runs when the DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+  checkPassword();
+});
+
+// Your existing code
 function checkPassword() {
   const secret = "zazaeini"; // change to your secret password
   let entered = prompt("Enter the secret password 💖:");
@@ -7,7 +13,6 @@ function checkPassword() {
     document.body.innerHTML = "<h2 style='color:white; text-align:center; margin-top:20%;'>Access Denied 🚫</h2>";
   }
 }
-
 
 // Messages for each picture
 const messages = [
@@ -22,7 +27,6 @@ const messages = [
 function showMessage(index) {
   const box = document.getElementById("msgBox");
   const msgText = document.getElementById("msgText");
-  
   msgText.textContent = messages[index];
   box.classList.add("show");
 }
@@ -30,6 +34,3 @@ function showMessage(index) {
 function closeMessage() {
   document.getElementById("msgBox").classList.remove("show");
 }
-
-
-
