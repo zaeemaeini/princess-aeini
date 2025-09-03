@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Top Sentence */
+.top-text {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.top-text p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px #ff99cc;
+  color: #fff;
+}
+
+/* Center Arabic Word */
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.neon {
+  font-size: 2.5rem;
+  color: #ff1a1a;
+  text-shadow: 
+    0 0 10px #ff1a1a,
+    0 0 20px #ff1a1a,
+    0 0 40px #ff1a1a,
+    0 0 80px #ff1a1a;
+  text-align: center;
+}
+
+/* Gallery at Bottom */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.img-card {
+  text-align: center;
+}
+
+.img-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 12px rgba(255,255,255,0.5);
+}
+
+.img-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.9);
+}
+
+.img-card p {
+  margin-top: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px #ff99cc;
+}
+
+/* Popup Message */
+.message {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  z-index: 5;
+  transition: all 0.4s ease;
+  width: 85%;
+  max-width: 320px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+.message.show {
+  bottom: 10%;
+  opacity: 1;
+}
+
+.message button {
+  margin-top: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ff4da6;
+  color: white;
+  font-weight: bold;
+}
+
+.message button:hover {
+  background: #ff1a8c;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .neon { font-size: 3.5rem; }
+  .gallery { grid-template-columns: repeat(3, 1fr); max-width: 700px; }
+}
+
+@media (min-width: 1024px) {
+  .gallery { grid-template-columns: repeat(6, 1fr); max-width: 1000px; }
+}

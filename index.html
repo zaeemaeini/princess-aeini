@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Top sentence -->
+  <div class="top-text">
+    <p>You are my love 💖</p>
+  </div>
+
+  <!-- Center Arabic Word -->
+  <div class="center-text">
+    <h1 class="neon">عینی❤️</h1>
+  </div>
+
+  <!-- Image Gallery at Bottom -->
+  <div class="gallery">
+    <div class="img-card">
+      <img src="img1.jpeg" alt="Pic 1" onclick="showMessage(0)">
+      <p>My Everything</p>
+    </div>
+    <div class="img-card">
+      <img src="img2.jpeg" alt="Pic 2" onclick="showMessage(1)">
+      <p>My Aeini</p>
+    </div>
+    <div class="img-card">
+      <img src="img3.jpeg" alt="Pic 3" onclick="showMessage(2)">
+      <p>My Babe</p>
+    </div>
+    <div class="img-card">
+      <img src="img6.jpeg" alt="Pic 4" onclick="showMessage(3)">
+      <p>My Princess</p>
+    </div>
+    <div class="img-card">
+      <img src="img5.jpeg" alt="Pic 5" onclick="showMessage(4)">
+      <p>My Love</p>
+    </div>
+    <div class="img-card">
+      <img src="img7.jpeg" alt="Pic 6" onclick="showMessage(5)">
+      <p>My Hot Girl</p>
+    </div>
+  </div>
+
+  <!-- Popup message box -->
+  <div id="msgBox" class="message">
+    <p id="msgText"></p>
+    <button onclick="closeMessage()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
