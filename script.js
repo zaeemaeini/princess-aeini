@@ -1,5 +1,5 @@
 function checkPassword() {
-  const secret = "zazaeini"; // <-- change this to your secret password
+  const secret = "zazaeini"; // change to your secret password
   let entered = prompt("Enter the secret password 💖:");
 
   if (entered !== secret) {
@@ -30,5 +30,6 @@ function showMessage(index) {
 function closeMessage() {
   document.getElementById("msgBox").classList.remove("show");
 }
+
 
 
