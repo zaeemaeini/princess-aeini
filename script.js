@@ -1,3 +1,14 @@
+function checkPassword() {
+  const secret = "zazaeini"; // <-- change this to your secret password
+  let entered = prompt("Enter the secret password 💖:");
+
+  if (entered !== secret) {
+    alert("Sorry, wrong password 😢");
+    document.body.innerHTML = "<h2 style='color:white; text-align:center; margin-top:20%;'>Access Denied 🚫</h2>";
+  }
+}
+
+
 // Messages for each picture
 const messages = [
   "You are my brightest star 🌟",
@@ -19,3 +30,4 @@ function showMessage(index) {
 function closeMessage() {
   document.getElementById("msgBox").classList.remove("show");
 }
+
