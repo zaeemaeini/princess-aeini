@@ -130,3 +130,20 @@ body {
 @media (min-width: 1024px) {
   .gallery { grid-template-columns: repeat(6, 1fr); max-width: 1000px; }
 }
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 10px #ff1a1a,
+      0 0 20px #ff1a1a,
+      0 0 40px #ff1a1a,
+      0 0 80px #ff1a1a;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.neon {
+  animation: flicker 1.5s infinite;
+}
